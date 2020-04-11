@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="427.0" prefWidth="651.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="imageprocessing.Controller">
+    <children>
+        <Button fx:id="button" layoutX="14.0" layoutY="14.0" onAction="#handleFileButtonAction" text="Choose an image file" />
+        <ImageView fx:id="originalImageView" fitHeight="300.0" fitWidth="300.0" layoutX="15.0" layoutY="114.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+        <Label fx:id="originalLabel" layoutX="130.0" layoutY="67.0" text="Original" visible="false">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <Label fx:id="filteredLabel" layoutX="458.0" layoutY="67.0" text="Filtered" visible="false">
+            <font>
+                <Font size="20.0" />
+            </font>
+        </Label>
+        <ImageView fx:id="filteredImageView" fitHeight="300.0" fitWidth="300.0" layoutX="341.0" layoutY="114.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" />
+      <ComboBox fx:id="filterComboBox" layoutX="240.0" layoutY="14.0" onAction="#handleComboBoxAction" prefWidth="150.0" promptText="Filter type" />
+      <RadioButton fx:id="highPassRadioButton" layoutX="402.0" layoutY="20.0" mnemonicParsing="false" selected="true" text="High-pass" />
+      <RadioButton fx:id="thresholdRadioButton" layoutX="524.0" layoutY="20.0" mnemonicParsing="false" text="Threshold" />
+       <fx:define>
+          <ToggleGroup fx:id="filterTypeGroup"/>
+       </fx:define>
+    </children>
+</AnchorPane>
